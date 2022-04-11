@@ -12,8 +12,10 @@ import subprocess
 v0=Tk()
 v0.title("Control I/O (INPUT/OUTPUT)")
 v0.geometry("500x400+0+0")
-img_on = PhotoImage(file="~/Documentos/proyecto_pi/encender.png")
-img_off = PhotoImage(file="~/Documentos/proyecto_pi/apagar.png")
+usuario = os.getlogin()
+
+img_on = PhotoImage(file="/home/"+usuario+"/Documentos/proyecto_pi/encender.png")
+img_off = PhotoImage(file="/home/"+usuario+"/Documentos/proyecto_pi/apagar.png")
 
 
 # zona de tipo de fuentes
@@ -26,7 +28,7 @@ label_on=Label(v0,text="GPIO21 ",font=text1).place(x=170,y=100)
 label_on=Label(v0,text="GPIO27 ",font=text1).place(x=300,y=100)
 
 def update():
-             pf=open("~/Documentos/proyecto_pi/gpio17.txt","r")
+             pf=open("/home/"+usuario+"/Documentos/proyecto_pi/gpio17.txt","r")
              for line in pf:
                 campo=line.split("\n")
                 campof=campo[0]
@@ -41,7 +43,7 @@ def update():
 update()
 
 def update2():
-             pf=open("~/Documentos/proyecto_pi/gpio21.txt","r")
+             pf=open("/home/"+usuario+"/Documentos/proyecto_pi/gpio21.txt","r")
              for line in pf:
                 campo=line.split("\n")
                 campof=campo[0]
@@ -56,7 +58,7 @@ def update2():
 update2()
 
 def update3():
-             pf=open("~/Documentos/proyecto_pi/gpio27.txt","r")
+             pf=open("/home/"+usuario+"/Documentos/proyecto_pi/gpio27.txt","r")
              for line in pf:
                 campo=line.split("\n")
                 campof=campo[0]
@@ -75,24 +77,24 @@ update3()
 #Se debe ser ordenado y respetar los margenes tal cual para que no de error
 def on17():
         print "ENCENDIDO"
-        os.system("~/Documentos/proyecto_pi/encender17.sh")
+        os.system("/home/"+usuario+"/Documentos/proyecto_pi/encender17.sh")
 def off17():
         print "APAGADO"
-        os.system("~/Documentos/proyecto_pi/apagar17.sh")
+        os.system("/home/"+usuario+"/Documentos/proyecto_pi/apagar17.sh")
         
 def on21():
         print "ENCENDIDO"
-        os.system("~/Documentos/proyecto_pi/encender21.sh") 
+        os.system("/home/"+usuario+"/Documentos/proyecto_pi/encender21.sh") 
 def off21():
         print "APAGADO"
-        os.system("~/Documentos/proyecto_pi/apagar21.sh")
+        os.system("/home/"+usuario+"/Documentos/proyecto_pi/apagar21.sh")
         
 def on27():
         print "ENCENDIDO"
-        os.system("~/Documentos/proyecto_pi/encender27.sh")
+        os.system("/home/"+usuario+"/Documentos/proyecto_pi/encender27.sh")
 def off27():
         print "APAGADO"
-        os.system("~/Documentos/proyecto_pi/apagar27.sh")        
+        os.system("/home/"+usuario+"/Documentos/proyecto_pi/apagar27.sh")        
 
     
 # zona de Botones
