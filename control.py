@@ -77,24 +77,24 @@ update3()
 #Se debe ser ordenado y respetar los margenes tal cual para que no de error
 def on17():
         print "ENCENDIDO"
-        os.system("echo 1 /home/"+usuario+"/Documentos/proyecto_pi/gpio17.txt")
+        os.system("echo 1 > /home/"+usuario+"/Documentos/proyecto_pi/gpio17.txt")
 def off17():
         print "APAGADO"
-        os.system("echo 0 /home/"+usuario+"/Documentos/proyecto_pi/gpio17.txt")
+        os.system("echo 0 > /home/"+usuario+"/Documentos/proyecto_pi/gpio17.txt")
         
 def on21():
         print "ENCENDIDO"
-        os.system("echo 1 /home/"+usuario+"/Documentos/proyecto_pi/gpio21.txt") 
+        os.system("echo 1 > /home/"+usuario+"/Documentos/proyecto_pi/gpio21.txt") 
 def off21():
         print "APAGADO"
-        os.system("echo 0 /home/"+usuario+"/Documentos/proyecto_pi/gpio21.txt")
+        os.system("echo 0 > /home/"+usuario+"/Documentos/proyecto_pi/gpio21.txt")
         
 def on27():
         print "ENCENDIDO"
-        os.system("echo 1 /home/"+usuario+"/Documentos/proyecto_pi/gpio27.txt")
+        os.system("echo 1 > /home/"+usuario+"/Documentos/proyecto_pi/gpio27.txt")
 def off27():
         print "APAGADO"
-        os.system("echo 0 /home/"+usuario+"/Documentos/proyecto_pi/gpio27.txt")        
+        os.system("echo 0 > /home/"+usuario+"/Documentos/proyecto_pi/gpio27.txt")        
 
     
 # zona de Botones
